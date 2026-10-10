@@ -2,7 +2,7 @@
 
 Public address: https://trishulvani.github.io
 
-The entry embeds the full Python application hosted on Render. Browser URL remains on GitHub Pages. The direct-host link supports browsers that block embedded cookies.
+The entry opens with a lightweight animated identity sequence, then embeds the full Python application hosted on Render. The intro supports Enter/Escape, auto-continues, respects reduced motion, and appears once per browser-tab session. The direct-host link supports browsers that block embedded cookies.
 
 Application source, tests, Docker configuration, and documentation: https://github.com/TrishulVani/trishul-vani-studio
 
