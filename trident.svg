@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 280" role="img" aria-labelledby="title">
+  <title id="title">TRISHUL VANI forged trident</title>
+  <defs>
+    <linearGradient id="metal" x1="0" y1="0" x2="1" y2=".8">
+      <stop stop-color="#fff3c4"/>
+      <stop offset=".28" stop-color="#c8a65c"/>
+      <stop offset=".52" stop-color="#ffe3a0"/>
+      <stop offset=".78" stop-color="#987949"/>
+      <stop offset="1" stop-color="#f5d48d"/>
+    </linearGradient>
+    <linearGradient id="shaft" x1="0" y1="0" x2="1" y2="0">
+      <stop stop-color="#8b6b39"/><stop offset=".4" stop-color="#fbe5a5"/><stop offset=".75" stop-color="#cfaf69"/><stop offset="1" stop-color="#775b31"/>
+    </linearGradient>
+    <path id="side" d="M27 12 C36 24 47 39 49 57 L38 51 L38 76 C39 104 56 121 94 123 L94 138 C46 136 24 112 22 78 L21 53 L10 61 C11 41 18 25 27 12 Z"/>
+  </defs>
+  <g stroke="#ffedbb" stroke-width="1.2" stroke-linejoin="round">
+    <use href="#side" fill="url(#metal)"/>
+    <use href="#side" transform="translate(200 0) scale(-1 1)" fill="url(#metal)"/>
+    <path d="M91 114 H109 V240 L100 280 L91 240 Z" fill="url(#shaft)"/>
+    <path d="M100 0 C112 19 124 42 123 61 L109 52 L109 132 H91 V52 L77 61 C76 42 88 19 100 0 Z" fill="url(#metal)"/>
+    <path d="M62 202 C79 202 93 210 100 224 C107 210 121 202 138 202 C120 212 109 225 100 243 C91 225 80 212 62 202 Z" fill="url(#metal)"/>
+    <path d="M86 143 L100 131 L114 143 L100 158 Z" fill="#bcefc7" stroke="#fff4bd" stroke-width="2"/>
+  </g>
+  <g fill="none" stroke="#fff5d2" stroke-linecap="round" opacity=".72">
+    <path d="M100 19 V123 M28 34 C29 94 47 126 83 130 M172 34 C171 94 153 126 117 130" stroke-width="1.7"/>
+    <path d="M96 165 V236 M73 208 C86 213 94 223 100 235 M127 208 C114 213 106 223 100 235" stroke-width="1"/>
+  </g>
+</svg>
