@@ -16,13 +16,13 @@
   <g stroke="#ffedbb" stroke-width="1.2" stroke-linejoin="round">
     <use href="#side" fill="url(#metal)"/>
     <use href="#side" transform="translate(200 0) scale(-1 1)" fill="url(#metal)"/>
-    <path d="M91 114 H109 V240 L100 280 L91 240 Z" fill="url(#shaft)"/>
+    <path d="M91 114 H109 V266 Q100 277 91 266 Z" fill="url(#shaft)"/>
     <path d="M100 0 C112 19 124 42 123 61 L109 52 L109 132 H91 V52 L77 61 C76 42 88 19 100 0 Z" fill="url(#metal)"/>
-    <path d="M62 202 C79 202 93 210 100 224 C107 210 121 202 138 202 C120 212 109 225 100 243 C91 225 80 212 62 202 Z" fill="url(#metal)"/>
+    <path d="M64 202 C78 205 89 208 100 208 C111 208 122 205 136 202 L136 211 C122 213 111 218 100 218 C89 218 78 213 64 211 Z" fill="url(#metal)"/>
     <path d="M86 143 L100 131 L114 143 L100 158 Z" fill="#bcefc7" stroke="#fff4bd" stroke-width="2"/>
   </g>
   <g fill="none" stroke="#fff5d2" stroke-linecap="round" opacity=".72">
     <path d="M100 19 V123 M28 34 C29 94 47 126 83 130 M172 34 C171 94 153 126 117 130" stroke-width="1.7"/>
-    <path d="M96 165 V236 M73 208 C86 213 94 223 100 235 M127 208 C114 213 106 223 100 235" stroke-width="1"/>
+    <path d="M96 165 V263 M72 207 C85 213 94 215 100 215 M128 207 C115 213 106 215 100 215" stroke-width="1"/>
   </g>
 </svg>
