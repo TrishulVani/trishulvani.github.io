@@ -31,15 +31,15 @@
     <iframe class="studio" id="studio" title="TRISHUL VANI research workspace" src="https://trishul-vani-studio.onrender.com/index.html" allow="autoplay; fullscreen" referrerpolicy="no-referrer"></iframe>
     <section class="veil" id="intro" aria-label="TRISHUL VANI introduction">
       <canvas id="field" aria-hidden="true"></canvas><div class="glow" aria-hidden="true"></div>
-      <header class="header"><div class="identity"><img class="identity-mark" src="trident.svg" alt="">TRISHUL VANI</div><div class="spacer"></div><div class="live"><i></i> SIGNAL ONLINE</div><a href="https://github.com/TrishulVani/trishul-vani-studio" target="_blank" rel="noopener">SOURCE</a></header>
+      <header class="header"><div class="identity"><img class="identity-mark" src="trident.svg?v=6bca51a" alt="">TRISHUL VANI</div><div class="spacer"></div><div class="live"><i></i> SIGNAL ONLINE</div><a href="https://github.com/TrishulVani/trishul-vani-studio" target="_blank" rel="noopener">SOURCE</a></header>
       <div class="scene">
         <aside class="side side-left"><span class="index">01 / DISCOVER</span><div class="side-rule"></div><h2>See what<br>sound hides.</h2><p>Move beyond the waveform. Explore the structure within every signal.</p><small>FREQUENCY / TIME / ENERGY</small></aside>
         <div class="center" id="center">
           <div class="orb" aria-hidden="true"><div class="halo"></div><i class="spark a"></i><i class="spark b"></i><i class="spark c"></i>
-            <img class="trident" src="trident.svg" alt="">
+            <img class="trident" src="trident.svg?v=6bca51a" alt="">
           </div>
           <p class="kicker">AN EXPERIMENT IN SIGNAL</p><h1 class="title"><span>TRISHUL</span><span class="vani">VANI</span></h1><p class="subtitle">Three prongs. One signal. Infinite insight.</p>
-          <button class="enter" id="enter" type="button">ENTER THE WORKSPACE <img src="trident.svg" alt=""></button><span class="caption">INTERACTIVE AUDIO WORKSPACE · FREE TO EXPLORE</span>
+          <button class="enter" id="enter" type="button">ENTER THE WORKSPACE <img src="trident.svg?v=6bca51a" alt=""></button><span class="caption">INTERACTIVE AUDIO WORKSPACE · FREE TO EXPLORE</span>
         </div>
         <aside class="side side-right"><span class="index">02 / TRANSFORM</span><div class="side-rule"></div><h2>Shape the<br>unseen.</h2><p>Paint spectral edits, compare experiments, and export your evidence.</p><small>IMPORT / EDIT / EXPORT</small></aside>
       </div>
@@ -51,6 +51,7 @@
     const intro=document.getElementById('intro'),studio=document.getElementById('studio'),loading=document.getElementById('loading'),center=document.getElementById('center');
     function enter(){intro.classList.add('is-hidden');setTimeout(()=>{intro.hidden=true},950)}
     document.getElementById('enter').addEventListener('click',enter);
+    setTimeout(enter,8500);
     document.addEventListener('keydown',event=>{if(event.key==='Escape'&& !intro.hidden)enter()});
     studio.addEventListener('load',()=>{loading.style.opacity='0';setTimeout(()=>loading.hidden=true,450)});
     const canvas=document.getElementById('field'),ctx=canvas.getContext('2d');let width=0,height=0,particles=[],tick=0,mouse={x:0,y:0};const reduced=matchMedia('(prefers-reduced-motion: reduce)').matches;
