@@ -1,11 +1,13 @@
 # TRISHUL VANI public website
 
-Public address: https://trishulvani.github.io
+Version 1: https://trishulvani.github.io
 
-Design 02 opens with an original sculpted forged-copper trident, neon-orange and ultraviolet signal accents, orbit rings, waveform motion and Oxanium display typography. After 8.5 seconds—or when the visitor selects **Enter the Workspace**—it transitions directly into the connected dashboard. The full Python application runs inside this same public address. The intro respects reduced-motion settings.
+Design 02: https://trishulvani.github.io/design-v2/
+
+The entry opens with an original sculpted, mint-metal trident, signal rings, waveform motion, and display typography. After 8.5 seconds—or when the visitor selects **Enter the Workspace**—it transitions directly into the mission-control landing dashboard. The full Python application runs inside this same public address. The intro respects reduced-motion settings.
 
 Application source, tests, Docker configuration, and documentation: https://github.com/TrishulVani/trishul-vani-studio
 
 Backend: https://trishul-vani-studio.onrender.com
 
-GitHub Pages publishes main / root. No keys, credentials, audio, or datasets are stored in this repository.
+GitHub Pages publishes `main`: root serves Version 1 and `design-v2/` serves the separate visual experience. Both embed the connected Python backend. No keys, credentials, audio, or datasets are stored in this repository.
