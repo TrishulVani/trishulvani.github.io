@@ -1,0 +1,22 @@
+name: Verify public entries
+on:
+  push:
+    branches: [main, 'feat/**']
+  pull_request:
+permissions:
+  contents: read
+jobs:
+  static:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Verify both introductions and Version 2 route
+        run: |
+          test -s index.html
+          test -s design-v2/index.html
+          test -s design-v2/mark.svg
+          grep -q 'id="intro"' index.html
+          grep -q 'experience.html' design-v2/index.html
+          grep -q 'index.html?design=2' design-v2/index.html
+          ! grep -qi '<iframe' design-v2/index.html
+          ! grep -qi 'chatgpt' design-v2/index.html
