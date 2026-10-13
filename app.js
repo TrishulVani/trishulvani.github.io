@@ -142,7 +142,10 @@ async function init(){
   $('#play-btn').addEventListener('click',()=>{if(!state.report){notify('Run an experiment before playing audio.');return}if(state.playback){player.pause()}else{player.play().catch(e=>notify('Cannot play track: '+e.message,true))}});
   player.addEventListener('play',()=>{state.playback=true;updatePlayButton()});player.addEventListener('pause',()=>{state.playback=false;updatePlayButton()});player.addEventListener('ended',()=>{state.playback=false;updatePlayButton()});
   $('#history-refresh').addEventListener('click',refreshHistory);
-  $$('.nav-item').forEach(item=>item.addEventListener('click',()=>{$$('.nav-item').forEach(x=>x.classList.toggle('active',x===item))}));
+const mobileViews={overview:'overview','audio-lab':'audio','analytics':'analytics','datasets':'datasets','hardware-lab':'hardware',system:'system'};
+function setMobileViewFromHash(){if(!document.body.classList.contains('design-v2')||innerWidth>700){delete document.body.dataset.mobileView;return}const key=location.hash.slice(1);const view=mobileViews[key]||'overview';document.body.dataset.mobileView=view;$$('.nav-item').forEach(item=>{const active=(item.getAttribute('href')==='#'+key)||(view==='overview'&&item.getAttribute('href')==='#overview');item.classList.toggle('active',active);if(active)item.setAttribute('aria-current','page');else item.removeAttribute('aria-current')})}
+$$('.nav-item').forEach(item=>item.addEventListener('click',event=>{const href=item.getAttribute('href')||'';if(innerWidth<=700&&document.body.classList.contains('design-v2')&&href.startsWith('#')){event.preventDefault();history.pushState(null,'',href);setMobileViewFromHash();window.scrollTo({top:0,behavior:'smooth'});const target=document.querySelector(href);if(target)target.setAttribute('tabindex','-1');return}$$('.nav-item').forEach(x=>x.classList.toggle('active',x===item))}));
+window.addEventListener('hashchange',setMobileViewFromHash);window.addEventListener('popstate',setMobileViewFromHash);window.addEventListener('resize',setMobileViewFromHash);setMobileViewFromHash();
   window.addEventListener('resize',()=>drawWaveform(state.report?.waveforms?.[state.track]));
   drawWaveform();setTrack('raw');
   const checkConnection=async()=>{
