@@ -1,0 +1,18 @@
+.v2-brand-glyph{display:none;flex:none;width:32px;height:29px;object-fit:contain;image-rendering:auto;box-shadow:0 0 18px #c8a46f17}
+body.design-v2 .v2-brand-glyph,body.experience-v2 .v2-brand-glyph{display:block}
+body.design-v2 .sidebar .brand-symbol,body.design-v2 .rail .brand .trident{display:none}
+body.design-v2 .sidebar .brand .v2-brand-glyph,body.design-v2 .rail .brand .v2-brand-glyph{width:36px;height:32px;margin-right:11px}
+body.experience-v2 .identity .v2-brand-glyph{width:36px;height:32px}
+body.experience-v2 footer .v2-brand-glyph{width:30px;height:27px}
+.arrival-brand,.flyover-brand,.v2-journey-brand{display:inline-flex;align-items:center;gap:12px}
+.arrival-brand .v2-brand-glyph,.flyover-brand .v2-brand-glyph,.v2-journey-brand .v2-brand-glyph{width:30px;height:27px}
+@media(max-width:700px){body.design-v2 .rail .brand{display:flex}}
+@media(max-width:650px){.arrival-brand,.flyover-brand,.v2-journey-brand{gap:7px}.arrival-brand .v2-brand-glyph,.flyover-brand .v2-brand-glyph,.v2-journey-brand .v2-brand-glyph{width:27px;height:24px}}
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@800&display=swap');
+.deva-wordmark{font-family:Manrope,Arial,sans-serif;white-space:nowrap;font-synthesis:none;text-shadow:none;-webkit-font-smoothing:antialiased}
+.deva-wordmark [lang=hi]{font-family:'Noto Sans Devanagari','Nirmala UI','Mangal',sans-serif;font-weight:800;letter-spacing:0;font-size:1.25em;color:#edc990;text-shadow:none;font-synthesis:none;vertical-align:-.04em}
+body.design-v2 .sidebar .brand strong .deva-wordmark,body.design-v2 .rail .brand .deva-wordmark{font-size:16px;letter-spacing:-.045em}
+body.design-v2 .flyover-brand .deva-wordmark,body.design-v2 .v2-journey-brand .deva-wordmark{font-size:1.08em;letter-spacing:.04em}
+.v2-only{display:none!important}
+body.design-v2 .v2-only{display:flex!important}
+body.design-v2 #system .v2-only{display:block!important}

@@ -1,0 +1,6 @@
+#hardware-lab{display:none!important}
+body.design-v2 #hardware-lab{display:block!important}
+#hardware-lab .hardware-lab-intro{max-width:750px;color:#b9c8be;line-height:1.7;margin:0 0 24px}
+#hardware-lab .hardware-lab-intro a{color:#e4c397;text-decoration:underline;text-underline-offset:3px;font-weight:800}
+#hardware-lab-frame{display:block;width:100%;min-height:820px;border:0;background:#070d0b;overflow:hidden}
+@media(max-width:600px){#hardware-lab-frame{min-height:1100px}}

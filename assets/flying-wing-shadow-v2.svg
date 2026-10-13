@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 240" role="img" aria-label="Illustrative flying-wing aircraft silhouette">
+  <defs><linearGradient id="wing" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#1b2747"/><stop offset="1" stop-color="#080d1c"/></linearGradient></defs>
+  <path fill="url(#wing)" stroke="#b8c9ff" stroke-opacity=".28" stroke-width="3" d="M360 18 402 93 713 183 657 198 538 190 509 219 444 211 398 225 360 206 322 225 276 211 211 219 182 190 63 198 7 183 318 93Z"/>
+  <path fill="none" stroke="#afc2ff" stroke-opacity=".32" stroke-width="2" d="M360 18v188M318 93l42 23 42-23M63 198l255-105m339 105L402 93"/>
+</svg>

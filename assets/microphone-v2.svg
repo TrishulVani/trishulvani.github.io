@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 600" role="img" aria-labelledby="title">
+  <title id="title">Stylized studio microphone</title>
+  <defs>
+    <linearGradient id="shell"><stop stop-color="#233052"/><stop offset=".19" stop-color="#e9eeff"/><stop offset=".4" stop-color="#8395c9"/><stop offset=".68" stop-color="#1a2547"/><stop offset=".88" stop-color="#c3cff5"/><stop offset="1" stop-color="#36436e"/></linearGradient>
+    <linearGradient id="mesh" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#111a31"/><stop offset=".5" stop-color="#566898"/><stop offset="1" stop-color="#0c152c"/></linearGradient>
+    <pattern id="grill" width="9" height="9" patternUnits="userSpaceOnUse"><path d="M0 0L9 9M9 0L0 9" stroke="#dbe4ff" stroke-opacity=".4" stroke-width=".8"/></pattern>
+    <filter id="glow"><feGaussianBlur stdDeviation="5"/></filter>
+  </defs>
+  <ellipse cx="140" cy="570" rx="75" ry="10" fill="#a8bbff" opacity=".12" filter="url(#glow)"/>
+  <path d="M94 110Q94 28 140 24Q186 28 186 110V255Q186 299 140 301Q94 299 94 255Z" fill="url(#mesh)" stroke="#b9c8fa" stroke-width="4"/>
+  <path d="M99 94Q101 34 140 31Q179 34 181 94V245Q181 285 140 289Q99 285 99 245Z" fill="url(#grill)" opacity=".85"/>
+  <path d="M105 97Q109 39 135 35M179 88V234" fill="none" stroke="#f2f5ff" stroke-opacity=".42" stroke-width="3"/>
+  <rect x="82" y="265" width="116" height="48" rx="15" fill="url(#shell)" stroke="#cbd6ff" stroke-width="3"/>
+  <rect x="105" y="308" width="70" height="61" rx="8" fill="url(#shell)"/>
+  <path d="M67 317Q67 405 140 405Q213 405 213 317M67 317V274M213 317V274" fill="none" stroke="url(#shell)" stroke-width="13" stroke-linecap="round"/>
+  <circle cx="67" cy="276" r="13" fill="#cbd6ff"/><circle cx="213" cy="276" r="13" fill="#cbd6ff"/>
+  <path d="M140 405V532M103 535H177M82 556H198" fill="none" stroke="url(#shell)" stroke-width="15" stroke-linecap="round"/>
+  <path d="M120 365H160" stroke="#edf2ff" stroke-opacity=".45" stroke-width="3"/>
+</svg>

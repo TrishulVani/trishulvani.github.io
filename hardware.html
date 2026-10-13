@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#07100d">
+  <meta name="description" content="त्रिSHUL VANI virtual hardware workbench: inspect the concept enclosure, wire controller modules, simulate control scripts and test the real audio processor.">
+  <title>त्रिSHUL VANI / Hardware workbench</title>
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/hardware-v2.css?v=1">
+<link rel="preconnect" href="https://trishul-vani-studio.onrender.com" crossorigin></head>
+<body><script src="/api-client.js"></script><script>if(new URLSearchParams(location.search).has('embed'))document.body.classList.add('embedded')</script>
+  <a class="skip-link" href="#model">Skip to hardware workbench</a>
+  <header class="hardware-top">
+    <a class="hardware-brand" href="/lab.html?design=2" aria-label="त्रिSHUL VANI Version 2 home"><img src="/assets/brand-glyph-v2.png" alt=""><span><strong class="deva-wordmark"><span lang="hi">त्रि</span>SHUL VANI</strong><small>HARDWARE / VIRTUAL WORKBENCH</small></span></a>
+    <nav aria-label="Hardware navigation"><a href="/lab.html?design=2">Mission control</a><a href="#wiring">Wiring</a><a href="#code">Code</a><a href="#software-test">Software test</a></nav>
+    <span class="prototype-pill">SIMULATION / NO DEVICE CONNECTED</span>
+  </header>
+  <main>
+    <section class="hardware-hero" aria-labelledby="hardware-title">
+      <p class="eyebrow">DESIGN 02 / VIRTUAL EDGE SYSTEM</p>
+      <h1 id="hardware-title">Build the path.<br><em>Hear the proof.</em></h1>
+      <p>Inspect the supplied MK-IV concept as a live 3D assembly. Wire a two-channel capture path, add controllers, write a bounded control script, then run the existing Python audio engine against your virtual configuration.</p>
+      <div class="hero-links"><a class="primary-link" href="#model">Inspect the enclosure <span aria-hidden="true">↘</span></a><a href="#wiring">Go to wiring bench</a></div>
+      <div class="hero-orbit" aria-hidden="true"></div>
+    </section>
+
+    <section id="model" class="hardware-section" aria-labelledby="model-title">
+      <div class="section-title"><div><p class="eyebrow">01 / PHYSICAL ASSEMBLY</p><h2 id="model-title">Inside the field unit.</h2></div><p>Drag to orbit · scroll over model to zoom · keyboard arrows rotate</p></div>
+      <div class="model-layout">
+        <aside class="model-chapters" aria-label="Assembly chapters">
+          <button type="button" data-step="overview"><span>00 / SYSTEM</span>Complete assembly</button>
+          <button type="button" data-step="mics"><span>01 / INPUT</span>Dual-microphone headset</button>
+          <button type="button" data-step="adc"><span>02 / CAPTURE</span>Shared-clock interface</button>
+          <button type="button" data-step="dsp" class="active"><span>03 / PROCESS</span>Open field enclosure</button>
+          <button type="button" data-step="radio"><span>04 / LINK</span>Network concept</button>
+          <button type="button" data-step="control"><span>05 / OUTPUT</span>Control receiver</button>
+        </aside>
+        <div class="model-stage">
+          <div class="model-toolbar"><div class="mode-buttons" role="group" aria-label="Assembly mode"><button type="button" data-mode="closed">Closed</button><button type="button" data-mode="open" class="active">Open case</button><button type="button" data-mode="explode">Exploded</button><button type="button" data-mode="cutaway">Cutaway</button></div><label><input type="checkbox" id="show-labels" checked> Part labels</label></div>
+          <canvas id="viewer" tabindex="0" role="img" aria-label="Interactive 3D concept assembly showing headset, field processor, shared-clock capture board and control receiver"></canvas>
+          <div id="model-device-status" class="model-device-status" role="status">VIRTUAL FIELD UNIT / RUN THE CONTROLLER SCRIPT</div>
+          <div id="hotspots" class="hotspots" aria-label="Selectable hardware components"></div>
+          <div id="modelFallback" class="model-fallback"><p>WebGL2 is unavailable. Use the chapter controls and wiring bench to inspect this concept.</p></div>
+          <div class="model-caption"><div><span class="eyebrow" id="stage-index">03 / LOCAL DSP</span><h3 id="stage-title">Open the enclosure.</h3><p id="stage-desc">Inspect the processing stack and the two-channel capture path.</p></div><div class="camera-actions"><button type="button" id="zoom-in" aria-label="Zoom in">+</button><button type="button" id="zoom-out" aria-label="Zoom out">−</button><button type="button" id="reset" aria-label="Reset camera">↺</button></div></div>
+        </div>
+        <aside class="model-inspector"><span class="eyebrow">ENGINEERING INSPECTOR</span><h3 id="detail-title">Processing enclosure</h3><p id="detail-copy">This is a dimensional concept, not a fabrication drawing.</p><div class="selected-part"><small>SELECTED PART</small><strong id="part-name">Single-board computer</strong><p id="part-detail">Choose a model hotspot for its intended role and design caveats.</p></div><div class="inspector-facts"><strong>Design constraints</strong><p>Both microphone channels require one synchronized capture clock. Board clearances, current draw, thermal behavior and connector fit still need bench measurement.</p><strong>Part connections</strong><div id="part-connections" class="part-connections">Select a labelled part to inspect its logical nets.</div></div><div class="link-mode" aria-label="Link scenario"><button type="button" data-link="wifi" class="active">Lab Wi-Fi</button><button type="button" data-link="radio">Radio concept</button></div><p id="link-explain" class="fine">Controlled laboratory link only. No remote link has been validated.</p></aside>
+      </div>
+      <p class="model-source">3D geometry adapted from your supplied MK-IV prototype. Materials, lighting and presentation are a visual study; dimensions and electrical fit are not certified.</p>
+    </section>
+
+    <section id="wiring" class="hardware-section" aria-labelledby="wiring-title">
+      <div class="section-title"><div><p class="eyebrow">02 / VIRTUAL CIRCUIT</p><h2 id="wiring-title">Connect the signal.</h2></div><p>Choose two compatible port buttons to add a wire. Select a wire in the list to remove it.</p></div>
+      <div class="bench-toolbar"><label for="board-type">Add a controller</label><select id="board-type"><option value="pico">Raspberry Pi Pico W</option><option value="esp32">ESP32-S3</option><option value="pi">Raspberry Pi 4 Model B</option></select><button type="button" id="add-board">Add board</button><button type="button" id="reset-wiring">Load reference circuit</button><button type="button" id="export-netlist">Export netlist + scripts</button></div>
+      <div class="bench-layout"><div class="wiring-stage" id="wiring-stage"><svg id="wire-layer" aria-hidden="true"></svg><div id="module-grid" class="module-grid" aria-label="Virtual components and ports"></div></div><aside class="wiring-diagnostics"><span class="eyebrow">CIRCUIT INSPECTOR</span><h3 id="wiring-state">Checking connections…</h3><p id="port-hint">Select an output port, then a compatible input.</p><ul id="wiring-issues" aria-live="polite"></ul><h4>Connected nets</h4><div id="wire-list"></div><div id="connection-inspector" class="connection-inspector" aria-live="polite"><strong>Choose Inspect beside a net</strong><p>Trace its signal type, source, destination and virtual state.</p></div><p class="fine">Logical netlist only. This does not calculate voltage drop, current, signal integrity, EMC, thermal load or safe physical wiring.</p></aside></div>
+    </section>
+
+    <section id="code" class="hardware-section" aria-labelledby="code-title">
+      <div class="section-title"><div><p class="eyebrow">03 / CONTROLLER LOGIC</p><h2 id="code-title">Program the response.</h2></div><p>Write control commands for each virtual controller; runs are bounded and remain inside this browser.</p></div>
+      <div class="code-layout"><div class="code-editor"><div class="code-bar"><label for="code-board">Controller</label><select id="code-board"></select><button type="button" id="load-example">Example</button><button type="button" id="run-code">Deploy &amp; run virtual rig</button></div><textarea id="code-input" spellcheck="false" aria-label="Virtual controller script"></textarea><p class="code-help">Supported commands: <code>MODE HYBRID</code>, <code>STREAM ON</code>, <code>SET GPIO17 HIGH</code>, <code>READ GPIO27</code>, <code>SEND UART READY</code>, <code>WAIT 100</code>, <code>LOG message</code>. Maximum 40 lines per controller; no arbitrary Python or shell execution.</p></div><aside class="code-output"><span class="eyebrow">SIMULATED SERIAL MONITOR</span><pre id="serial-output" role="status" aria-live="polite">Run the virtual rig to inspect pin and link events.</pre><div class="virtual-pins" id="virtual-pins"></div><p class="fine">Scripts run in a bounded virtual command interpreter. No code is flashed to a physical board; electrical timing and firmware drivers are not emulated.</p></aside></div>
+      <div class="rig-report"><div><span class="eyebrow">VIRTUAL DEVICE VERIFICATION</span><h3 id="rig-summary">Run scripts to see which tasks would start.</h3><p>Task checks reflect the current scripts and logical netlist. They cannot certify electrical or real-time hardware behavior.</p></div><div id="task-results" class="task-results" aria-live="polite"></div></div>
+    </section>
+
+    <section id="software-test" class="hardware-section" aria-labelledby="test-title">
+      <div class="section-title"><div><p class="eyebrow">04 / CONNECTED SOFTWARE TEST</p><h2 id="test-title">Validate with sound.</h2></div><p>This section calls the existing FastAPI processor. Hardware status remains virtual.</p></div>
+      <div class="test-layout"><div class="test-config"><div class="test-fields"><label>Noise environment<select id="test-noise"><option value="factory">Factory</option><option value="engine">Engine</option><option value="wind">Wind</option><option value="impulse">Impulse</option><option value="crowd">Crowd</option></select></label><label>Input SNR (dB)<input id="test-snr" type="number" value="-4" min="-15" max="20"></label><label>Duration (s)<select id="test-duration"><option>1.5</option><option selected>3</option><option>5</option><option>8</option></select></label><label>Seed<input id="test-seed" type="number" value="42" min="0" max="2147483647"></label></div><button id="run-software" type="button" class="primary-link">Run connected DSP test</button><p class="fine">The signal is synthetic; measured results describe the software run only. No Raspberry Pi timing or two-microphone hardware is inferred.</p></div><div class="test-result"><span class="eyebrow">PROCESSOR RESULT</span><div id="test-status" role="status">No test run yet.</div><div id="test-metrics"></div><div class="test-audio" id="test-audio" hidden><label for="test-track">Listen to output</label><select id="test-track"><option value="raw">Raw</option><option value="nlms">NLMS</option><option value="spectral">Spectral DSP</option><option value="hybrid">Hybrid</option></select><audio id="test-player" controls preload="none"></audio><a id="open-lab" href="/lab.html?design=2#audio-lab">Open result in V2 Audio Laboratory</a></div></div></div>
+    </section>
+  </main>
+  <footer><strong class="deva-wordmark"><span lang="hi">त्रि</span>SHUL VANI</strong><span>VIRTUAL ASSEMBLY / SOFTWARE TESTS / PHYSICAL VALIDATION PENDING</span><a href="/lab.html?design=2">Return to V2</a></footer>
+  <script defer src="/hardware-model-v2.js?v=1"></script>
+  <script defer src="/virtual-rig-v2.js?v=1"></script>
+  <script defer src="/hardware-v2.js?v=2"></script>
+</body>
+</html>

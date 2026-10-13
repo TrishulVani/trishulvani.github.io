@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 320" role="img" aria-labelledby="title desc">
+  <title id="title">TRISHUL VANI trident</title>
+  <desc id="desc">Three pointed spearheads rise from curved symmetrical arms above a single forged shaft.</desc>
+  <defs>
+    <linearGradient id="metal" x1=".12" y1="0" x2=".85" y2="1"><stop stop-color="#ffffff"/><stop offset=".28" stop-color="#9ba9d2"/><stop offset=".52" stop-color="#303d70"/><stop offset=".76" stop-color="#c7d3ff"/><stop offset="1" stop-color="#56659a"/></linearGradient>
+    <linearGradient id="edge" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#5e6b98"/><stop offset=".48" stop-color="#e1e8ff"/><stop offset="1" stop-color="#7787c2"/></linearGradient>
+  </defs>
+  <g fill="url(#metal)" stroke="#cbd4f6" stroke-width="1" stroke-linejoin="round">
+    <path d="M120 6 L145 77 Q126 66 121 95 L121 205 L119 205 L119 95 Q114 66 95 77 Z"/>
+    <path d="M42 52 Q71 77 68 112 Q63 92 56 104 Q50 122 58 140 Q70 163 104 165 L104 188 Q54 184 38 151 Q22 118 42 52 Z"/>
+    <path d="M198 52 Q169 77 172 112 Q177 92 184 104 Q190 122 182 140 Q170 163 136 165 L136 188 Q186 184 202 151 Q218 118 198 52 Z"/>
+    <path d="M112 88 L112 183 Q99 175 90 177 Q106 184 120 211 Q134 184 150 177 Q141 175 128 183 L128 88 Z"/>
+    <path d="M111 205 L129 205 L129 284 L120 311 L111 284 Z"/>
+    <path d="M105 211 Q120 216 135 211 L135 222 Q120 228 105 222 Z" fill="url(#edge)"/>
+    <path d="M107 229 Q120 233 133 229 L133 236 Q120 240 107 236 Z" fill="url(#edge)"/>
+    <path d="M110 282 L130 282 L126 292 L114 292 Z" fill="url(#edge)"/>
+  </g>
+  <g fill="none" stroke="#edf1ff" stroke-linecap="round" opacity=".8">
+    <path d="M120 13 L120 202 M43 66 Q33 143 76 170 M197 66 Q207 143 164 170 M116 241 L116 282" stroke-width="1.6"/>
+  </g>
+</svg>

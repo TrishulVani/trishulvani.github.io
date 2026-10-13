@@ -1,0 +1,44 @@
+/* One restrained environment behind the V2 story and working application. */
+body.design-v2,body.experience-v2{
+  --tv-obsidian:#05090d;--tv-navy:#081522;--tv-forest:#071e1a;
+  --tv-emerald:#0c8b72;--tv-gold:#d6a55b;--tv-copper:#af753d;
+  --tv-graphite:#161d24;--tv-steel:#233b4d;--tv-mist:#a7b9b4;--tv-ivory:#e7ebe8;
+  --tv-forest-opacity:.82;--tv-navy-opacity:.12;--tv-gold-opacity:.28;
+  background:var(--tv-obsidian);color:var(--tv-ivory);
+}
+.tv-atmosphere{position:fixed;inset:0;z-index:0;overflow:hidden;pointer-events:none;background:var(--tv-obsidian);contain:paint}
+.tv-atmosphere>span{position:absolute;inset:-8%;display:block;pointer-events:none}
+.tv-atmosphere .tv-forest{opacity:var(--tv-forest-opacity);background:radial-gradient(ellipse 50% 65% at 42% 46%,#16483a99,transparent 78%),radial-gradient(ellipse 45% 50% at 84% 90%,#0c8b722d,transparent 80%),linear-gradient(125deg,#06120f,#071e1a 58%,#05090d);transition:opacity .16s linear}
+.tv-atmosphere .tv-navy{opacity:var(--tv-navy-opacity);background:radial-gradient(ellipse 55% 63% at 73% 34%,#233b4d99,transparent 75%),radial-gradient(ellipse 80% 50% at 18% 90%,#162b3e8c,transparent 80%),linear-gradient(138deg,#07111b,#081522 60%,#05090d);transition:opacity .16s linear}
+.tv-atmosphere .tv-light{opacity:var(--tv-gold-opacity);background:radial-gradient(ellipse 24% 36% at 57% 40%,#d6a55b60,transparent 84%),radial-gradient(ellipse 34% 28% at 8% 74%,#af753d37,transparent 78%);mix-blend-mode:screen;transition:opacity .16s linear}
+.tv-atmosphere .tv-detail{opacity:.27;background:repeating-radial-gradient(circle at 50% 48%,transparent 0 84px,#8da6a014 85px,transparent 86px),linear-gradient(90deg,transparent 49.97%,#8da6a00d 50%,transparent 50.03%);mask-image:radial-gradient(ellipse at center,#000 0,transparent 75%)}
+.tv-atmosphere .tv-vignette{inset:0;box-shadow:inset 0 0 16vw 2vw #010405ac;background:linear-gradient(90deg,#0206076b,transparent 20%,transparent 80%,#02060772)}
+body.design-v2 .app-shell,body.design-v2 > main,body.experience-v2 > main,body.experience-v2 > footer{position:relative;z-index:1}
+body.design-v2 .main,body.design-v2 .content,body.design-v2 main,body.design-v2 .page{background:transparent!important}
+body.design-v2 .sidebar,body.design-v2 .topbar,body.design-v2 header,body.design-v2 .rail{background:#071210e8!important;border-color:#60786a52}
+body.design-v2 .panel,body.design-v2 .lab-card,body.design-v2 .step-card,body.design-v2 .workspace .panel,body.design-v2 .metric-card{background:linear-gradient(145deg,#172622eb,#0b1718f2);border-color:#6681744a;color:var(--tv-ivory)}
+body.design-v2 .scenario,body.design-v2 .dataset-card,body.design-v2 .dataset-intro,body.design-v2 .history-row,body.design-v2 .capability-row{background:#12201eec;border-color:#6681744a}
+body.design-v2 .section-block{position:relative;isolation:isolate;background:transparent!important;border-color:#8da6a02e}
+body.design-v2 .section-block:before{content:"";position:absolute;z-index:-1;inset:0;pointer-events:none;background:radial-gradient(ellipse 45% 35% at 80% 22%,#0c8b7212,transparent 78%),linear-gradient(180deg,#06130e58,transparent 25%,transparent 75%,#06130e44)}
+body.design-v2 #analytics:before{background:radial-gradient(ellipse 48% 55% at 15% 45%,#233b4d37,transparent 85%),linear-gradient(180deg,#06130e35,transparent 70%,#08152245)}
+body.design-v2 #datasets:before{background:radial-gradient(ellipse 52% 55% at 85% 40%,#0c8b7220,transparent 80%),linear-gradient(180deg,#08152230,transparent 70%,#06130e30)}
+body.design-v2 #system:before{background:radial-gradient(ellipse 40% 50% at 50% 20%,#d6a55b0d,transparent 80%),linear-gradient(180deg,#06130e24,transparent 70%,#05090d86)}
+body.design-v2 .flyover-stage{background:radial-gradient(ellipse 56% 70% at 83% 13%,#233b4d6e,transparent 80%),radial-gradient(ellipse 78% 55% at 30% 84%,#15253675,transparent 82%),linear-gradient(145deg,#101d29,#081522 57%,#05090d)}
+body.design-v2 .flyover-cloud.cloud-one{background:radial-gradient(ellipse,#4a6a7750,#233b4d20 45%,transparent 78%)}
+body.design-v2 .flyover-aura{background:radial-gradient(ellipse,#9cbbc119,#53748914 35%,transparent 72%)}
+body.design-v2 .flyover-craft{filter:drop-shadow(0 32px 32px #010407ee) brightness(1.08) contrast(1.08)}
+body.design-v2 .relaunch-story{background:transparent}
+body.design-v2 .relaunch-stage{background:radial-gradient(ellipse 58% 70% at 68% 40%,#1648385c,transparent 76%),linear-gradient(180deg,#081522 0,#071e1a 32%,#071e1a 78%,#081522 100%)}
+body.design-v2 .v2-journey{background:transparent}
+body.design-v2 .v2-journey-stage{background:radial-gradient(ellipse 53% 58% at 55% 42%,#1648386b,transparent 80%),linear-gradient(140deg,#071e1a,#05090d 83%)}
+body.design-v2 .v2-journey-stage:before{content:"";position:absolute;z-index:0;inset:0;pointer-events:none;opacity:var(--space,0);background:radial-gradient(ellipse 57% 63% at 55% 44%,#233b4d91,transparent 80%),linear-gradient(145deg,#07141f,#081522 70%,#05090d)}
+body.design-v2 .v2-journey-flight img{filter:saturate(.82) contrast(1.08)}
+body.design-v2 .section-head h2,body.design-v2 .page h1{color:var(--tv-ivory)}
+body.design-v2 .section-index,body.design-v2 .panel-eyebrow,body.design-v2 .mini-index{color:#d6b789}
+body.experience-v2 .site-head{background:#061210dd;border-color:#8da6a039}
+body.experience-v2 .scene{border-bottom-color:#8da6a02b}
+body.experience-v2 .hero{background:radial-gradient(ellipse 55% 62% at 54% 47%,#1648386b,transparent 78%),linear-gradient(145deg,#071e1a7a,#05090d65)}
+body.experience-v2 .split,body.experience-v2 .concept,body.experience-v2 .policies{background:radial-gradient(ellipse 53% 60% at 74% 43%,#0c8b721b,transparent 78%),linear-gradient(135deg,#06130ed4,#071e1a52)}
+body.experience-v2 .spectral{background:radial-gradient(ellipse 57% 62% at 35% 44%,#233b4d50,transparent 80%),linear-gradient(145deg,#07131fbe,#08152274)}
+body.experience-v2 .evidence{background:radial-gradient(ellipse 48% 56% at 73% 35%,#d6a55b14,transparent 80%),linear-gradient(135deg,#071e1a9c,#05090d8e)}
+@media(prefers-reduced-motion:reduce){.tv-atmosphere .tv-forest,.tv-atmosphere .tv-navy,.tv-atmosphere .tv-light{transition:none}}

@@ -1,13 +1,16 @@
-# TRISHUL VANI public website
+# त्रिSHUL VANI public website
 
-Main website (improved Version 1): https://trishulvani.github.io
+- **Main website / improved edition:** https://trishulvani.github.io/
+- **Version 2 / Original Edition:** https://trishulvani.github.io/design-v2/
+- **Application source:** https://github.com/TrishulVani/trishul-vani-studio
+- **Processing API:** https://trishul-vani-studio.onrender.com
 
-Version 2 / Original Edition: https://trishulvani.github.io/design-v2/
+The main edition is served directly by GitHub Pages, including its cinematic intro, landing story, laboratory, Spectral Studio, and hardware workbench. Static HTML, CSS, JavaScript, images, and animations load from GitHub's CDN; Render is used only for Python audio processing. The frontend starts a health request during the intro so a sleeping processor can wake before the user runs an experiment.
 
-The main address embeds the cinematic trident experience and its connected audio lab. The separate Original Edition opens with the previous sculpted mint trident and, after 8.5 seconds or the Enter button, transitions into the original mission-control dashboard. Both addresses retain the connected Python processor and respect reduced-motion settings.
+`design-v2/` preserves the previous mint Original Edition at its separate address.
 
-Application source, tests, Docker configuration, and documentation: https://github.com/TrishulVani/trishul-vani-studio
+The public frontend uses a random browser-local workspace capability when calling the API. Visitor artifacts remain isolated, uploads retain the existing size and duration limits, and no keys, credentials, audio, or datasets are stored in this repository.
 
-Backend: https://trishul-vani-studio.onrender.com
+## Publishing
 
-GitHub Pages publishes `main`: root serves the cinematic edition and `design-v2/` serves the previous mint edition. Both embed the connected Python backend. No keys, credentials, audio, or datasets are stored in this repository.
+GitHub Pages deploys the `main` branch through `.github/workflows/static.yml`. The app repository owns backend code, tests, Docker/Render configuration, and the canonical frontend source. This repository contains the public static release copy.
