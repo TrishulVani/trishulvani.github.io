@@ -2,7 +2,6 @@
   const arrival = document.getElementById('arrival');
   if (!arrival) return;
   if (new URLSearchParams(location.search).get('story') === '1') { arrival.remove(); return; }
-  const destination = '/index.html?design=2';
   const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
   const anchor = arrival.querySelector('.arrival-weapon-anchor');
   const weapon = arrival.querySelector('.arrival-weapon-body');
@@ -24,7 +23,10 @@
     cancelAnimationFrame(raf);
     clearTimeout(finishTimer);
     try { sessionStorage.setItem('tv-v2-arrival', '1'); } catch (_) { /* Navigation still works. */ }
-    location.replace(destination);
+    // The landing story is already underneath the intro. Reveal it in place
+    // so GitHub Pages never reloads the intro route or sends visitors to the lab.
+    arrival.classList.add('is-exiting');
+    setTimeout(() => arrival.remove(), 900);
   }
   function advance(amount) {
     if (closed) return;

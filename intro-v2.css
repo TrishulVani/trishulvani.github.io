@@ -29,6 +29,7 @@ body.experience-v2 .arrival[data-phase="5"]:after{animation:none;transform:trans
 @media(prefers-reduced-motion:reduce){.arrival-weapon-body{animation:none}.arrival-weapon-anchor{will-change:auto}}
 /* The supplied animatic's trident turn, throw and impact rebuilt as a live, reversible scene. */
 body.experience-v2 .arrival{background:radial-gradient(circle at 50% 47%,#0a2119 0,#03100d 30%,#020705 67%,#010302 100%)}
+.arrival.is-exiting{opacity:0;visibility:hidden;pointer-events:none;transition:opacity .85s ease,visibility .85s step-end}
 body.experience-v2 .arrival:before{opacity:.32;background:radial-gradient(circle at 50% 47%,#0f392737 0,transparent 37%),repeating-radial-gradient(circle at 50% 47%,transparent 0 81px,#c5a7771a 82px,transparent 83px);mask-image:radial-gradient(circle at center,#000 10%,transparent 75%)}
 body.experience-v2 .arrival-rings{width:min(68vw,790px);border-color:#9fbd8a2f;box-shadow:0 0 0 7vw #a3c3a205,0 0 0 15vw #bfa57004,0 0 130px #8ba97712;opacity:calc(.23 + var(--arrival-trails,0) * .35);transform:scale(calc(.86 + var(--arrival-progress,0) * .5)) rotate(calc(var(--arrival-progress,0) * 25deg))}
 .arrival-ghost{position:absolute;z-index:1;left:50%;top:46%;transform:translate(-50%,-50%);font:900 clamp(140px,27vw,470px)/.8 Syne,Manrope,sans-serif;letter-spacing:-.115em;color:#afd4ad;opacity:.027;white-space:nowrap;pointer-events:none}
