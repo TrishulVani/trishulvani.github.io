@@ -1,9 +1,24 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>त्रिSHUL VANI · Research platform</title><link rel="stylesheet" href="studio.css"><link rel="icon" href="favicon.svg"><style>main{margin:0}.page{max-width:1100px;padding-top:70px}.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin:35px 0}.card{padding:25px}.card h2{font:500 23px 'Space Grotesk',sans-serif}.card p,section>p{color:var(--muted);line-height:1.8}section{scroll-margin-top:30px}pre{padding:20px;background:#101919;border:1px solid var(--line);overflow:auto;font-size:12px;line-height:1.8}h2{font-family:'Space Grotesk',sans-serif}.link{color:var(--mint);text-decoration:underline}@media(max-width:650px){.cards{grid-template-columns:1fr}.page{padding-top:30px}}</style><link rel="preconnect" href="https://trishul-vani-studio.onrender.com" crossorigin></head><body><script src="/api-client.js"></script><main><header><a class="brand" href="lab.html" style="margin:0"><span class="trident">⋔</span><span><span lang="hi">त्रि</span>SHUL<b>VANI</b><small>VOLTEDGE / RESEARCH PLATFORM</small></span></a><span class="grow"></span><a href="studio.html" class="primary">Open studio ↗</a></header><div class="page"><span class="eyebrow mint">AUDIO RESEARCH / SOFTWARE ALPHA 0.2</span><h1>Clarity under pressure.<br><em>Evidence before claims.</em></h1><p>A working spectral audio studio backed by a documented local Python research laboratory. Inspect sound, refine frequency regions, compare layers, and export your evidence.</p><div class="cards"><article class="panel card"><span class="eyebrow">01 / PUBLIC EDITOR</span><h2>Your sound stays yours.</h2><p>Import audio, view its real STFT, attenuate or isolate selected regions, undo edits and export WAV + recipes. Computation runs in a Web Worker. Audio stays in your browser’s local storage.</p><a class="primary" href="studio.html">Start an edit ↗</a></article><article class="panel card"><span class="eyebrow">02 / LOCAL RESEARCH</span><h2>Test the whole pipeline.</h2><p>The Python lab adds controlled speech/noise mixtures, NLMS, spectral gating, a hybrid controller, known-reference metrics, dataset manifests and repeatable benchmark exports.</p><a class="quiet" href="#local-lab">Run the full lab ↓</a></article><article class="panel card"><span class="eyebrow">03 / TRANSPARENT SCIENCE</span><h2>Know what is measured.</h2><p>External processed WAVs are comparison tracks. They are never substituted for independent clean ground truth. RNNoise is optional and never silently emulated as AI.</p><a class="quiet" href="#evidence">Read the evidence ↓</a></article></div><section id="local-lab"><span class="eyebrow mint">FULL PYTHON / FASTAPI APPLICATION</span><h2>Clone. Run. Experiment.</h2><p>The public edition is a browser spectral editor. The Python backend is not hosted on this site. Run the complete lab on your own machine using Python 3.11 or 3.12:</p><pre>git clone https://github.com/TrishulVani/trishul-vani-studio.git
-cd trishul-vani-studio
-python -m venv .venv
-# Windows PowerShell:
-.\.venv\Scripts\Activate.ps1
-# Linux / macOS: source .venv/bin/activate
-python -m pip install -r requirements-dev.txt
-python -m pytest -q
-python -m uvicorn app.main:app --host 127.0.0.1 --port 8000</pre><p>Open <code>http://127.0.0.1:8000</code> for the experiment lab and <code>/studio.html</code> for the Python-powered spectral workspace. The <a class="link" href="https://github.com/TrishulVani/trishul-vani-studio">repository</a> contains code, API documentation, CI workflows, Docker configuration and the development ledger.</p></section><div class="cards"><section class="panel card" id="evidence"><span class="eyebrow">VALIDATION</span><h2>Measured, repeatable.</h2><p>Tests verify STFT reconstruction, suppression of selected frequency bands, preservation of unrelated tones, exact output lengths, immutable sources, deterministic recipes and API exports. Python 3.11/3.12 tests and Docker builds run in GitHub Actions.</p><a class="link" href="https://github.com/TrishulVani/trishul-vani-studio/actions">View current CI results ↗</a></section><section class="panel card" id="datasets"><span class="eyebrow">DATASET VAULT</span><h2>Source with care.</h2><p>Real speech/noise datasets are not bundled. Import licensed recordings into the local registry with hashes, attribution, split and recording labels. The built-in test signal is synthetic and is not evidence of speech intelligibility.</p><p><a class="link" href="https://www.openslr.org/12/">LibriSpeech ↗</a><br><a class="link" href="https://zenodo.org/records/1227121">DEMAND environmental recordings ↗</a></p></section><section class="panel card" id="status"><span class="eyebrow">SYSTEM STATUS</span><h2>Software, honestly.</h2><p>Public spectral DSP: implemented.<br>Local Python research lab: implemented.<br>Genuine RNNoise: optional; not validated in this release.<br>Real-corpus benchmark: pending.<br>Native streaming / Raspberry Pi: pending.<br>Physical two-node link: not connected.</p></section></div><section><h2>Privacy & storage</h2><p>In this public editor, imported audio and rendered layers are stored in IndexedDB on your device. Clearing this site’s browser data removes sessions. Export WAV and JSON recipes to keep a backup. The host serves app files; it does not receive your audio. Fonts may be requested from Google Fonts. Audio formats and resampling depend on your browser; the Python lab uses SciPy resampling. This alpha is not a validated hearing-protection or safety device.</p></section><footer><span>VOLTEDGE / त्रिSHUL VANI</span><a class="link" href="https://github.com/TrishulVani/trishul-vani-studio">Source, limitations & roadmap ↗</a></footer></div></main></body></html>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#080e10">
+  <meta name="robots" content="noindex">
+  <link rel="canonical" href="https://trishul-vani-studio.onrender.com/">
+  <title>Opening त्रिSHUL VANI Studio…</title>
+  <script>
+    (() => {
+      const legacy = new URL(window.location.href);
+      const path = legacy.pathname.replace(/\/index\.html$/, "/") || "/";
+      window.location.replace(
+        `https://trishul-vani-studio.onrender.com${path}${legacy.search}${legacy.hash}`
+      );
+    })();
+  </script>
+</head>
+<body>
+  <p>Opening the connected TRISHUL VANI Studio…</p>
+  <p><a href="https://trishul-vani-studio.onrender.com/">Continue to the live website</a></p>
+</body>
+</html>
